@@ -16,7 +16,7 @@ function takeSnapshot()
 
 console.log('ml5 version', ml5.version);
 
-Classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/yenbaDdMk//model.json", modelLoaded);
+Classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/yenbaDdMk/model.json", modelLoaded);
 
 function modelLoaded()
 {
@@ -26,7 +26,7 @@ function modelLoaded()
 function check()
 {
     image = document.getElementById("captured_image");
-    Classifier.Classify(image, gotResult);
+    Classifier.classify(image, gotResult);
 }
 
 function gotResult(error, results)
